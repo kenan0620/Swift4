@@ -230,10 +230,12 @@
                                 <constraints>
                                     <constraint firstItem="7oX-l5-9Py" firstAttribute="leading" secondItem="naC-48-t1n" secondAttribute="leading" id="1QQ-OO-Fxa"/>
                                     <constraint firstAttribute="bottom" secondItem="7oX-l5-9Py" secondAttribute="bottom" id="6sC-UE-AoO"/>
+                                    <constraint firstItem="ZsI-xF-NXO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="naC-48-t1n" secondAttribute="leading" constant="20" symbolic="YES" id="GC0-XA-lsD"/>
                                     <constraint firstAttribute="trailing" secondItem="ZsI-xF-NXO" secondAttribute="trailing" constant="10" id="Qzg-un-Zx8"/>
                                     <constraint firstItem="ZsI-xF-NXO" firstAttribute="top" secondItem="naC-48-t1n" secondAttribute="top" constant="10" id="Xlf-vP-88A"/>
                                     <constraint firstItem="7oX-l5-9Py" firstAttribute="top" secondItem="naC-48-t1n" secondAttribute="top" constant="50" id="bUS-V6-Sfq"/>
                                     <constraint firstAttribute="trailing" secondItem="7oX-l5-9Py" secondAttribute="trailing" id="eCG-LB-e8m"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Gq-hP-3ym" secondAttribute="trailing" constant="20" symbolic="YES" id="eiv-sI-40N"/>
                                     <constraint firstItem="3Gq-hP-3ym" firstAttribute="top" secondItem="naC-48-t1n" secondAttribute="top" constant="10" id="slB-Bb-IPe"/>
                                     <constraint firstItem="3Gq-hP-3ym" firstAttribute="leading" secondItem="naC-48-t1n" secondAttribute="leading" constant="10" id="wfk-75-HAX"/>
                                 </constraints>

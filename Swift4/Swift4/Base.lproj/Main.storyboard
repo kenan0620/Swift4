@@ -126,6 +126,162 @@
             </objects>
             <point key="canvasLocation" x="-1308" y="661.61919040479768"/>
         </scene>
+        <!--基本控件的使用1-->
+        <scene sceneID="m2A-3B-W45">
+            <objects>
+                <viewController id="o6R-Z3-fQX" customClass="SecondVC" customModule="Swift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCo-Tn-jkI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iaz-Ce-oxo">
+                                <rect key="frame" x="36" y="84" width="304" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                    <segment title="Fifth"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.4995380342066551" blue="0.13870973187076896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="basisSegmentControlClick:" destination="o6R-Z3-fQX" eventType="valueChanged" id="YpF-Ro-Cla"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUc-be-9Ua">
+                                <rect key="frame" x="20" y="132" width="335" height="50"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="hNZ-ZR-aaX">
+                                        <rect key="frame" x="92" y="7" width="151" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="pageIndicatorTintColor" red="0.76930768309999997" green="0.93867389899999998" blue="0.69321561970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.93867389899999998" green="0.18305785098880056" blue="0.41910913831827318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="basisPageControlValueChange:" destination="o6R-Z3-fQX" eventType="valueChanged" id="nwv-2p-bUb"/>
+                                        </connections>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.48417064295044976" green="0.37839756095119803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="rsy-zk-4tb">
+                                <rect key="frame" x="140" y="202" width="94" height="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="basisStepperChange:" destination="o6R-Z3-fQX" eventType="valueChanged" id="aHd-ne-5oR"/>
+                                </connections>
+                            </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="QNW-0q-JgM">
+                                <rect key="frame" x="217" y="202" width="17" height="29"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reduce" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-2s-Vza">
+                                <rect key="frame" x="140" y="202" width="17" height="29"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zP-kj-XPP">
+                                <rect key="frame" x="182" y="206" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="qNg-s0-8kT">
+                                <rect key="frame" x="26" y="251" width="323" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fr-nj-qUG">
+                                <rect key="frame" x="149.5" y="273" width="77" height="30"/>
+                                <state key="normal" title="时间选择器"/>
+                                <connections>
+                                    <action selector="timeChooseBtnClick" destination="o6R-Z3-fQX" eventType="touchUpInside" id="wS9-EY-weX"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naC-48-t1n">
+                                <rect key="frame" x="0.0" y="401" width="375" height="266"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-l5-9Py">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="216"/>
+                                        <color key="backgroundColor" red="1" green="0.67608382368227571" blue="0.90795335013840672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="533635359.039015">
+                                            <!--2017-11-29 08:02:39 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePickerChoose:" destination="o6R-Z3-fQX" eventType="valueChanged" id="e9g-rV-ifk"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gq-hP-3ym">
+                                        <rect key="frame" x="10" y="10" width="31" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="zCW-ld-bAi"/>
+                                        </constraints>
+                                        <state key="normal" title="取消"/>
+                                        <connections>
+                                            <action selector="cancelChooseDateBtnClick" destination="o6R-Z3-fQX" eventType="touchUpInside" id="5SX-qa-dOw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsI-xF-NXO">
+                                        <rect key="frame" x="334" y="10" width="31" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fnn-XT-Te5"/>
+                                        </constraints>
+                                        <state key="normal" title="确定"/>
+                                        <connections>
+                                            <action selector="entetChooseDateBtnClick" destination="o6R-Z3-fQX" eventType="touchUpInside" id="EGw-5H-G65"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79387930087280767" green="0.8102907241063777" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7oX-l5-9Py" firstAttribute="leading" secondItem="naC-48-t1n" secondAttribute="leading" id="1QQ-OO-Fxa"/>
+                                    <constraint firstAttribute="bottom" secondItem="7oX-l5-9Py" secondAttribute="bottom" id="6sC-UE-AoO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZsI-xF-NXO" secondAttribute="trailing" constant="10" id="Qzg-un-Zx8"/>
+                                    <constraint firstItem="ZsI-xF-NXO" firstAttribute="top" secondItem="naC-48-t1n" secondAttribute="top" constant="10" id="Xlf-vP-88A"/>
+                                    <constraint firstItem="7oX-l5-9Py" firstAttribute="top" secondItem="naC-48-t1n" secondAttribute="top" constant="50" id="bUS-V6-Sfq"/>
+                                    <constraint firstAttribute="trailing" secondItem="7oX-l5-9Py" secondAttribute="trailing" id="eCG-LB-e8m"/>
+                                    <constraint firstItem="3Gq-hP-3ym" firstAttribute="top" secondItem="naC-48-t1n" secondAttribute="top" constant="10" id="slB-Bb-IPe"/>
+                                    <constraint firstItem="3Gq-hP-3ym" firstAttribute="leading" secondItem="naC-48-t1n" secondAttribute="leading" constant="10" id="wfk-75-HAX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rsy-zk-4tb" firstAttribute="centerX" secondItem="0zP-kj-XPP" secondAttribute="centerX" id="3Hy-VC-IfJ"/>
+                            <constraint firstItem="CDi-P4-qdb" firstAttribute="trailing" secondItem="naC-48-t1n" secondAttribute="trailing" id="6jB-rU-MPe"/>
+                            <constraint firstItem="CDi-P4-qdb" firstAttribute="bottom" secondItem="RU2-2s-Vza" secondAttribute="bottom" constant="436" id="8uw-XI-T37"/>
+                            <constraint firstItem="RU2-2s-Vza" firstAttribute="leading" secondItem="rsy-zk-4tb" secondAttribute="leading" id="8zc-aX-AIf"/>
+                            <constraint firstItem="RU2-2s-Vza" firstAttribute="top" secondItem="NUc-be-9Ua" secondAttribute="bottom" constant="20" id="I9D-Tu-lKP"/>
+                            <constraint firstItem="naC-48-t1n" firstAttribute="bottom" secondItem="CDi-P4-qdb" secondAttribute="bottom" id="LiQ-ED-ENf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qNg-s0-8kT" secondAttribute="trailing" constant="10" id="QHc-bS-ikk"/>
+                            <constraint firstItem="rsy-zk-4tb" firstAttribute="trailing" secondItem="QNW-0q-JgM" secondAttribute="trailing" id="Sok-Es-pgh"/>
+                            <constraint firstItem="rsy-zk-4tb" firstAttribute="top" secondItem="QNW-0q-JgM" secondAttribute="top" id="T2L-Hc-1F5"/>
+                            <constraint firstItem="iaz-Ce-oxo" firstAttribute="top" secondItem="CDi-P4-qdb" secondAttribute="top" constant="20" id="T9j-V4-zaL"/>
+                            <constraint firstItem="NUc-be-9Ua" firstAttribute="centerX" secondItem="0zP-kj-XPP" secondAttribute="centerX" id="THv-ux-Aav"/>
+                            <constraint firstItem="rsy-zk-4tb" firstAttribute="bottom" secondItem="QNW-0q-JgM" secondAttribute="bottom" id="Xat-dS-cIA"/>
+                            <constraint firstItem="7Fr-nj-qUG" firstAttribute="centerX" secondItem="nCo-Tn-jkI" secondAttribute="centerX" id="bj2-zy-8Lz"/>
+                            <constraint firstItem="NUc-be-9Ua" firstAttribute="leading" secondItem="CDi-P4-qdb" secondAttribute="leading" constant="20" id="dC1-cG-sCz"/>
+                            <constraint firstItem="0zP-kj-XPP" firstAttribute="centerY" secondItem="QNW-0q-JgM" secondAttribute="centerY" id="fLH-It-EiG"/>
+                            <constraint firstItem="NUc-be-9Ua" firstAttribute="top" secondItem="iaz-Ce-oxo" secondAttribute="bottom" constant="20" id="gfi-p9-0mp"/>
+                            <constraint firstItem="qNg-s0-8kT" firstAttribute="leading" secondItem="nCo-Tn-jkI" secondAttribute="leadingMargin" constant="10" id="kEu-tO-IYn"/>
+                            <constraint firstItem="RU2-2s-Vza" firstAttribute="top" secondItem="QNW-0q-JgM" secondAttribute="top" id="nVQ-wW-RgK"/>
+                            <constraint firstItem="naC-48-t1n" firstAttribute="leading" secondItem="CDi-P4-qdb" secondAttribute="leading" id="qnb-uA-w80"/>
+                            <constraint firstItem="iaz-Ce-oxo" firstAttribute="centerX" secondItem="NUc-be-9Ua" secondAttribute="centerX" id="roR-Z6-bNj"/>
+                            <constraint firstItem="rsy-zk-4tb" firstAttribute="centerX" secondItem="nCo-Tn-jkI" secondAttribute="centerX" id="tJi-Bp-wqz"/>
+                            <constraint firstItem="qNg-s0-8kT" firstAttribute="top" secondItem="rsy-zk-4tb" secondAttribute="bottom" constant="20" id="trG-76-ICd"/>
+                            <constraint firstItem="7Fr-nj-qUG" firstAttribute="top" secondItem="qNg-s0-8kT" secondAttribute="bottom" constant="20" id="wMT-n3-PeE"/>
+                            <constraint firstItem="RU2-2s-Vza" firstAttribute="bottom" secondItem="rsy-zk-4tb" secondAttribute="bottom" id="zgi-nC-ml7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CDi-P4-qdb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="基本控件的使用1" id="sf1-u2-YOP"/>
+                    <connections>
+                        <outlet property="basisDatePickerBgView" destination="naC-48-t1n" id="V7R-g6-ChJ"/>
+                        <outlet property="basisPageControl" destination="hNZ-ZR-aaX" id="bUk-gz-190"/>
+                        <outlet property="basisProgressView" destination="qNg-s0-8kT" id="V1X-EX-e9I"/>
+                        <outlet property="basisSegmentControl" destination="iaz-Ce-oxo" id="HWh-UV-tyz"/>
+                        <outlet property="basisStepperLab" destination="0zP-kj-XPP" id="Jr7-ba-ZrR"/>
+                        <outlet property="basisStrpper" destination="rsy-zk-4tb" id="yyI-Tz-NYC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v76-Ua-4UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="671"/>
+        </scene>
         <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -134,16 +290,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMZ-a5-lnx">
-                                <rect key="frame" x="117" y="75" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMZ-a5-lnx">
+                                <rect key="frame" x="134" y="75" width="108" height="30"/>
                                 <state key="normal" title="基本控件的使用"/>
                                 <connections>
                                     <segue destination="wwK-aY-E8g" kind="show" id="Kcb-rn-ffe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWn-vV-IHv">
+                                <rect key="frame" x="131" y="119" width="114" height="30"/>
+                                <state key="normal" title="基本控件的使用1"/>
+                                <connections>
+                                    <segue destination="o6R-Z3-fQX" kind="show" id="STc-px-B7u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DWn-vV-IHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="15N-iL-ZT8"/>
+                            <constraint firstItem="DMZ-a5-lnx" firstAttribute="centerX" secondItem="DWn-vV-IHv" secondAttribute="centerX" id="ZQ6-0p-67l"/>
+                            <constraint firstItem="DMZ-a5-lnx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="fGp-ai-8OJ"/>
+                            <constraint firstItem="DWn-vV-IHv" firstAttribute="top" secondItem="DMZ-a5-lnx" secondAttribute="bottom" constant="14" id="naI-vI-KVm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="ChF-Xb-vZy"/>
@@ -154,6 +322,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="17" height="17"/>
+        <image name="Reduce" width="17" height="17"/>
         <image name="testOne.png" width="93" height="99"/>
     </resources>
 </document>

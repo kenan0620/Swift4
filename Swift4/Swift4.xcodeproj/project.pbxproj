@@ -15,6 +15,7 @@
 		2737B6A91FCE7C6300A2B806 /* Swift4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737B6A81FCE7C6300A2B806 /* Swift4Tests.swift */; };
 		2737B6B41FCE7C6300A2B806 /* Swift4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737B6B31FCE7C6300A2B806 /* Swift4UITests.swift */; };
 		2737B6C21FCE7E6B00A2B806 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737B6C11FCE7E6B00A2B806 /* FirstVC.swift */; };
+		2737B6C41FCE90DE00A2B806 /* testOne.png in Resources */ = {isa = PBXBuildFile; fileRef = 2737B6C31FCE90DD00A2B806 /* testOne.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2737B6B31FCE7C6300A2B806 /* Swift4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift4UITests.swift; sourceTree = "<group>"; };
 		2737B6B51FCE7C6300A2B806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2737B6C11FCE7E6B00A2B806 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		2737B6C31FCE90DD00A2B806 /* testOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testOne.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				2737B6931FCE7C6300A2B806 /* AppDelegate.swift */,
 				2737B6951FCE7C6300A2B806 /* ViewController.swift */,
 				2737B6C11FCE7E6B00A2B806 /* FirstVC.swift */,
+				2737B6C31FCE90DD00A2B806 /* testOne.png */,
 				2737B6971FCE7C6300A2B806 /* Main.storyboard */,
 				2737B69A1FCE7C6300A2B806 /* Assets.xcassets */,
 				2737B69C1FCE7C6300A2B806 /* LaunchScreen.storyboard */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2737B69E1FCE7C6300A2B806 /* LaunchScreen.storyboard in Resources */,
+				2737B6C41FCE90DE00A2B806 /* testOne.png in Resources */,
 				2737B69B1FCE7C6300A2B806 /* Assets.xcassets in Resources */,
 				2737B6991FCE7C6300A2B806 /* Main.storyboard in Resources */,
 			);

@@ -41,7 +41,7 @@ class FirstVC: UIViewController {
     }
     
     @IBAction func basisSilderClick(_ sender: UISlider) {
-        print("basisSilderClick~%f",sender.value)
+//        print("basisSilderClick~%f",sender.value)
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.basisTextView.resignFirstResponder()

@@ -28,29 +28,46 @@ class SecondVC: UIViewController {
     @IBAction func basisSegmentControlClick(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
     }
+    
     @IBAction func basisPageControlValueChange(_ sender: UIPageControl) {
     }
 
     @IBAction func basisStepperChange(_ sender: UIStepper) {
-        print(sender.value)
-        self.basisStepperLab.text = sender.value.description
+        
+        let numStr = String(format:"%0.0f",sender.value)
+        
+        self.basisStepperLab.text = numStr + "个"
+/*
+         相互转化
+         let num:Double = sender.value
+         let numInt = Int(num)
+         let numStr = String(format:"%d",numInt)
+         
+         self.basisStepperLab.text = numStr + "个"
+         
+         */
+
     }
     
     @IBAction func timeChooseBtnClick() {
         self.basisDatePickerBgView.isHidden = false;
     }
+    
     @IBAction func cancelChooseDateBtnClick() {
-        self.basisDatePickerBgView.isHidden = true;
+        self.basisDatePickerBgView.isHidden = true
     }
+    
     @IBAction func entetChooseDateBtnClick() {
         self.basisDatePickerBgView.isHidden = true;
         print(self.dateStr)
 
     }
+    
     @IBAction func datePickerChoose(_ sender: UIDatePicker) {
         self.dateStr = sender.date
         print(self.dateStr)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

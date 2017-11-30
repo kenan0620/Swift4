@@ -284,6 +284,59 @@
             </objects>
             <point key="canvasLocation" x="-610" y="671"/>
         </scene>
+        <!--WebView使用-->
+        <scene sceneID="Amw-7d-PeE">
+            <objects>
+                <viewController id="6xe-QW-Brx" customClass="ThirdVC" customModule="Swift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="61N-Qi-oeT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77y-29-JSh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6xe-QW-Brx" id="ANR-cF-qf4"/>
+                                </connections>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZd-AN-vvJ">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ima-xc-Upd">
+                                        <rect key="frame" x="31" y="31" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wzy-wo-O0T"/>
+                                    <constraint firstAttribute="width" constant="100" id="gzz-r4-fbA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="77y-29-JSh" firstAttribute="leading" secondItem="Ts9-sP-tb2" secondAttribute="leading" id="9JC-AT-GLA"/>
+                            <constraint firstItem="77y-29-JSh" firstAttribute="centerX" secondItem="61N-Qi-oeT" secondAttribute="centerX" id="9yV-h9-2w2"/>
+                            <constraint firstItem="oZd-AN-vvJ" firstAttribute="centerX" secondItem="61N-Qi-oeT" secondAttribute="centerX" id="NSh-NG-FKb"/>
+                            <constraint firstItem="77y-29-JSh" firstAttribute="top" secondItem="Ts9-sP-tb2" secondAttribute="top" id="eDq-6R-9ex"/>
+                            <constraint firstItem="77y-29-JSh" firstAttribute="centerY" secondItem="61N-Qi-oeT" secondAttribute="centerY" id="fkp-Gr-ocS"/>
+                            <constraint firstItem="oZd-AN-vvJ" firstAttribute="centerY" secondItem="61N-Qi-oeT" secondAttribute="centerY" id="n8z-wo-IHm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ts9-sP-tb2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WebView使用" id="oGL-7Z-skI"/>
+                    <connections>
+                        <outlet property="basisActivityIndicatorView" destination="ima-xc-Upd" id="YIT-fH-noe"/>
+                        <outlet property="basisMBView" destination="oZd-AN-vvJ" id="yKs-cJ-Hlb"/>
+                        <outlet property="basisWebView" destination="77y-29-JSh" id="Znf-eQ-dTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QpC-yJ-T4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="664"/>
+        </scene>
         <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -306,13 +359,22 @@
                                     <segue destination="o6R-Z3-fQX" kind="show" id="STc-px-B7u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-EB-3it">
+                                <rect key="frame" x="140.5" y="617" width="94" height="30"/>
+                                <state key="normal" title="WebView使用"/>
+                                <connections>
+                                    <segue destination="6xe-QW-Brx" kind="show" id="DJi-Gf-nzN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DWn-vV-IHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="15N-iL-ZT8"/>
+                            <constraint firstItem="Scc-EB-3it" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y4e-KQ-LwD"/>
                             <constraint firstItem="DMZ-a5-lnx" firstAttribute="centerX" secondItem="DWn-vV-IHv" secondAttribute="centerX" id="ZQ6-0p-67l"/>
                             <constraint firstItem="DMZ-a5-lnx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="fGp-ai-8OJ"/>
                             <constraint firstItem="DWn-vV-IHv" firstAttribute="top" secondItem="DMZ-a5-lnx" secondAttribute="bottom" constant="14" id="naI-vI-KVm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Scc-EB-3it" secondAttribute="bottom" constant="20" id="wTO-Ag-tlL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
